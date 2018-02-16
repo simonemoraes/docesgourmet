@@ -49,7 +49,7 @@ $mail->Port = 587;
 $mail->SMTPSecure = '';
 $mail->SMTPAuth = true;
 $mail->Username = "enviamensagem@kitrufas.com.br";
-$mail->Password = "42301886";
+$mail->Password = "sbvr2332";
 
 $mail->IsHTML(true);
 $mail->setFrom($email, $nome);

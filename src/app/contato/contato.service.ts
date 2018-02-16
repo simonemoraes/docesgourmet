@@ -12,7 +12,7 @@ export class ContatoService {
 
     // headers.append('Content-Type', 'application/json; charset=utf-8');
     return this.httpClient.post<string>(
-      "http://www.kitrufas.dtconsultoria.com.br/envio-form-kitrufas.php", objeto,{});
+      "http://www.kitrufas.com.br/envio-form-kitrufas.php", objeto,{});
   }
 
 }
