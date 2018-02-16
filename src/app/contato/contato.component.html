@@ -5,26 +5,55 @@
       <div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
         <h1 class="heading">Contate-nos</h1>
         <hr>
+
+        <app-mensagem-enviada class="col-md-12 col-sm-12" *ngIf="mensagemEnviada == 'sucesso'"></app-mensagem-enviada>
+
       </div>
       <div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-        <form>
+
+        <form [formGroup]="formulario">
+
           <div class="col-md-12 col-sm-12">
-            <input name="name" type="text" class="form-control formulario" id="name" placeholder="Nome">
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <input name="email" type="email" class="form-control formulario" id="email" placeholder="Email">
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <input name="telefone" type="telefone" class="form-control formulario" id="telefone" placeholder="telefone">
-          </div>
-          <div class="col-md-12 col-sm-12">
-            <textarea name="message" rows="8" class="form-control formulario" id="message" placeholder="Mensagem"></textarea>
+            <div class="form-group has-feedback" [ngClass]="aplicaCssErro('nome')">
+              <input [ngClass]="validaMensagem('nome')" formControlName="nome" type="text" class="form-control" id="name" placeholder="Nome">
+              <app-campo-control-erro [ngClass]="validaIconeInput('nome')"></app-campo-control-erro>
+            </div>
           </div>
 
-          <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-            <input class="form-control" id="submit" value="Enviar">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group has-feedback" [ngClass]="aplicaCssErro('email')">
+              <input  [ngClass]="validaMensagem('email')" formControlName="email" type="email" class="form-control" id="email" placeholder="Email">
+              <app-campo-control-erro [ngClass]="validaIconeInput('email')"></app-campo-control-erro>
+            </div>
           </div>
+
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group has-feedback" [ngClass]="aplicaCssErro('telefone')">
+              <input [ngClass]="validaMensagem('telefone')" formControlName="telefone" type="telefone" class="form-control" id="telefone" placeholder="telefone">
+              <app-campo-control-erro [ngClass]="validaIconeInput('telefone')"></app-campo-control-erro>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12">
+            <div class="form-group has-feedback" [ngClass]="aplicaCssErro('mensagem')">
+              <textarea [ngClass]="validaMensagem('mensagem')" formControlName="mensagem" rows="8" class="form-control" id="message" placeholder="Mensagem"></textarea>
+              <app-campo-control-erro [ngClass]="validaIconeInput('mensagem')"></app-campo-control-erro>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+
+            <!--Mensagem de validação de campos-->
+            <app-mensagem-erro style="margin-top: 15px;" class="col-md-3 col-sm-3" [campoInvalido]="mostraMensagem"></app-mensagem-erro>
+            <!--Mensagem de validação de campos    -->
+
+            <div class="col-md-6 col-sm-6">
+              <input (click)="enviar()" class="form-control" id="submit" value="Enviar" [disabled]="!formulario.valid">
+            </div>
+          </div>
+
         </form>
+
       </div>
       <div class="col-md-2 col-sm-1"></div>
     </div>

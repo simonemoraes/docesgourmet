@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule, HttpHeaders } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,6 +16,11 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CopyrightComponent } from './layout/copyright/copyright.component';
 import { LeiaMaisHomeComponent } from './leia-mais/leia-mais-home/leia-mais-home.component';
 
+import { ContatoService } from './contato/contato.service';
+import { MensagemEnviadaComponent } from './mensagem-enviada/mensagem-enviada.component';
+import { CampoControlErroComponent } from './campo-control-erro/campo-control-erro.component';
+import { MensagemErroComponent } from './mensagem-erro/mensagem-erro.component';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +33,19 @@ import { LeiaMaisHomeComponent } from './leia-mais/leia-mais-home/leia-mais-home
     ContatoComponent,
     FooterComponent,
     CopyrightComponent,
-    LeiaMaisHomeComponent
+    LeiaMaisHomeComponent,
+    MensagemEnviadaComponent,
+    CampoControlErroComponent,
+    MensagemErroComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ContatoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -30,6 +30,7 @@
       "scripts": [
         "assets/js/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "assets/js/jquery.mask.min.js",
         "assets/js/jquery.parallax.js",
         "assets/js/smoothscroll.js",
         "assets/js/wow.min.js",
