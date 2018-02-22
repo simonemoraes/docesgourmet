@@ -10,9 +10,10 @@ export class ContatoService {
   enviarFormulario (objeto: any): Observable<string> {
     let headers = new HttpHeaders();
 
-    // headers.append('Content-Type', 'application/json; charset=utf-8');
+    // headers.append('Content-Type', 'application/json');
+
     return this.httpClient.post<string>(
-      "http://www.kitrufas.com.br/envio-form-kitrufas.php", objeto,{});
+      "http://www.api.kitrufas.com.br/api/contato", objeto,{});
   }
 
 }

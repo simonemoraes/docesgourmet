@@ -76,16 +76,17 @@ export class ContatoComponent implements OnInit {
   public enviar() {
     let f = JSON.stringify(this.formulario.value)
 
+    console.log(this.formulario.value)
+
     if(this.formulario.valid){
-      this.srvContatoService.enviarFormulario(f).subscribe( resp => {
-        this.mensagemEnviada = resp
+      this.srvContatoService.enviarFormulario(this.formulario.value).subscribe( resp => {
+         this.mensagemEnviada = resp
 
         this.resetarFormulario()
       })
 
-    }else{
-      this.mensagemEnviada = 'Verifique os campos do formulário e tente novamente.'
     }
+
     this.mensagemEnviada = ''
   }
 
