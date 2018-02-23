@@ -20,6 +20,7 @@ import { ContatoService } from './contato/contato.service';
 import { MensagemEnviadaComponent } from './mensagem-enviada/mensagem-enviada.component';
 import { CampoControlErroComponent } from './campo-control-erro/campo-control-erro.component';
 import { MensagemErroComponent } from './mensagem-erro/mensagem-erro.component';
+import { NovidadesComponent } from './novidades/novidades.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { MensagemErroComponent } from './mensagem-erro/mensagem-erro.component';
     LeiaMaisHomeComponent,
     MensagemEnviadaComponent,
     CampoControlErroComponent,
-    MensagemErroComponent
+    MensagemErroComponent,
+    NovidadesComponent
   ],
   imports: [
     BrowserModule,

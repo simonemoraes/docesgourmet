@@ -14,6 +14,13 @@ $(document).ready( function(){
     })
     $(this).addClass('active');
   });
+  $('#novidades_').click( function(){
+    $('html, body').animate({scrollTop: $('.novidades').offset().top -50}, 1000)
+    $('a').each(function () {
+      $(this).removeClass('active');
+    })
+    $(this).addClass('active');
+  });
   $('#menupreco').click( function(){
     $('html, body').animate({scrollTop: $('.menu').offset().top -50}, 1000)
     $('a').each(function () {

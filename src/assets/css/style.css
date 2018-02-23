@@ -212,6 +212,26 @@ hr {
   line-height: 8px;
 }
 
+/* sessão novidades */
+#novidades {
+  background: url('../images/banner_novidades.jpg') 50% 0 repeat-y fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  /*text-align: center;*/
+}
+/* Fim sessão novidades */
+
 /* contact section */
 #contact {
   padding-top: 80px;
