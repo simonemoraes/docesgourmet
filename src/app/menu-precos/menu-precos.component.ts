@@ -8,19 +8,9 @@ import {Produtos} from './model/produtos';
 })
 export class MenuPrecosComponent implements OnInit {
 
-  prod: Produtos;
-
   constructor() { }
 
   ngOnInit() {
-    this.getProdutos();
-  }
-
-  public getProdutos(){
-    this.prod.produto = 'Docinho convencial'
-    this.prod.tipo = 'Cento'
-    this.prod.preco = 45.00
-
 
   }
 
