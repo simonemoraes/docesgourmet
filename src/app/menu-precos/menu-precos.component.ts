@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 import {Produtos} from './model/produtos';
 
 @Component({

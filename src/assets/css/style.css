@@ -107,9 +107,9 @@ hr {
   margin-bottom: 0;
 }
 
-.navbar-brand {
-  padding: 0px 0px;
-}
+/*.navbar-brand {*/
+  /*padding: 0px 0px;*/
+/*}*/
 .navbar-brand, .navbar-nav li a {
   line-height: 28px;
 }
